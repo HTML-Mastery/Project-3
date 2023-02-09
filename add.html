@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <style>
+        body{
+            background-color: #c2c2c2;
+        }
+      header {
+        border: 1px solid #f1f1f1;
+        background-color: #fff;
+      }
+      h1 {
+        margin-left: 100px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+      .back svg{
+        width: 24px;
+        height: 24px;
+        background-color: black;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 30px;
+      }
+      .add-new svg{
+        width: 24px;
+        height: 24px;
+        color: rgb(113, 113, 220);
+        background-color: #fff;
+        font-weight: bold;
+        border-radius: 30px;
+      }
+      .contain-add {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+      }
+      .contain-add .add-new {
+        margin-left: 150px;
+      }
+      .add-new {
+        color: rgb(72, 103, 104);
+      }
+      .fixed-column:hover {
+        box-shadow: 1px 1px 5px #867676;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        justify-content: center;
+      }
+
+      .fixed-column {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 20px #67676729;
+        border: 1px solid #ededed;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: 30px;
+        height: 260px;
+        opacity: 1;
+        width: 350px;
+      }
+      .checked {
+  color: #867676;
+}
+
+.contain {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.contain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ededed;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #c2c2c2;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+hr {
+  color: #ededed;
+}
+h2 {
+  color: #0890ec;
+  margin-left: 5px;
+}
+spen {
+  text-decoration: line-through;
+  color: #c2c2c2;
+}
+    </style>
+  </head>
+  <body class="body">
+    <header>
+      <h1>Task <span style="color: blue">List</span></h1>
+    </header>
+    <div class="contain-add">
+      <div>
+        <a href="./index.html" class="back"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-left-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+            />
+          </svg>
+          Back</a
+        >
+      </div>
+      <div>
+        <a href="./demo.html" class="add-new"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-plus-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+            />
+          </svg>
+          New Task</a
+        >
+      </div>
+    </div>
+    <div class="container">
+      <div class="fixed-column">
+        <h2>Trip to Pris</h2>
+        <hr />
+        <label class="contain"
+          >&nbsp;<spen> Visit Church</spen>
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="contain"
+          >&nbsp; Shopping
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
