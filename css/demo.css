@@ -60,7 +60,6 @@ a {
 .submit-btn {
   background-color: #00a5ec;
   color: #fff;
-
   width: 40%;
   border: 1px solid #f1f1f1;
   margin-left: 60%;
@@ -88,5 +87,21 @@ hr {
   .submit-btn {
     border: 1px solid #f1f1f1;
     margin-left: 55%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .fixed-column-2 {
+    top: 250px;
+    left: 80px;
+    bottom: 500px;
+  }
+  .fixed-column-2 {
+    width: 60%;
+    height: 40%;
+  }
+  .submit-btn {
+    border: 1px solid #f1f1f1;
+    margin-left: 35%;
+    width: 50%;
   }
 }
