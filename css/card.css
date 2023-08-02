@@ -1,0 +1,30 @@
+.container-demo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+  .back{
+    /* background-color: red; */
+    position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    color: #262626; 
+    margin-left: 15%; 
+    margin-top: 2px;  
+  }
+  .add-new {
+    margin-left: 65%;
+    margin-top: 25px;
+    font-size: 22px;
+    width: 150px;
+  }
+  h2 {
+    color: #0890ec;
+    margin-left: 5px;
+  }
+  
+  .add-new a {
+    color: rgb(72, 103, 104);
+    text-decoration: none;
+  }
